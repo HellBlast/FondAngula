@@ -1,0 +1,34 @@
+<h1>Listado de Usuarios del Back-end</h1>
+
+<div class="container">
+    <button type="button" class="btn btn-primary btn-lg" (click)="nuevoUsuario()">Nuevo</button> 
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Documento</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Acciones</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuarios">
+                <td>{{ usuario.documento }}</td>
+                <td>{{ usuario.nombres }}</td>
+                <td>{{ usuario.apellidos }}</td>
+                <td>{{ usuario.direccion }}</td>
+                <td>{{ usuario.telefono }}</td>
+                <td>{{ usuario.correo }}</td>
+                <td>
+                   <button type="button" class="btn btn-danger" (click)="eliminarUsuario(usuario.id)"> Eliminar</button> 
+                   |
+                   <button type="button" class="btn btn-warning" (click)="editarUsuario(usuario.id)"> Editar</button> 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

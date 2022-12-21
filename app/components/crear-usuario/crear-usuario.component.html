@@ -1,0 +1,36 @@
+<form action="">
+    <div class="container">
+
+        <div class="mb-3">
+            <label for="documento">Documento:</label>
+            <input type="text" class="form-control" name="documento" [(ngModel)]="usuario.documento">
+        </div>
+        <div class="mb-3">
+            <label for="nombres">Nombres:</label>
+            <input type="text" class="form-control" name="nombres" placeholder="digite nombres" required
+                [(ngModel)]="usuario.nombres">
+        </div>
+
+        <div class="mb-3">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" class="form-control" name="apellidos" [(ngModel)]="usuario.apellidos">
+        </div>
+
+        <div class="mb-3">
+            <label for="direccion">Direccion:</label>
+            <input type="text" class="form-control" name="direcion" [(ngModel)]="usuario.direccion">
+        </div>
+
+        <div class="mb-3">
+            <label for="telefono">Telefono:</label>
+            <input type="text" class="form-control" name="telefono" [(ngModel)]="usuario.telefono">
+        </div>
+
+        <div class="mb-3">
+            <label for="correo">Correo:</label>
+            <input type="email" class="form-control" name="correo" [(ngModel)]="usuario.correo">
+        </div>
+
+        <button type="submit" class="btn btn-primary" (click)="guardarUsuario()"> Agregar</button>
+    </div>
+</form>

@@ -1,0 +1,45 @@
+<h2>Modificar Usuarios</h2>
+
+<form action="">
+    <div class="container">
+        <div class="mb-3">
+            <label for="documento">Documento:</label>
+            <input type="text" class="form-control" name="documento" [(ngModel)]="usuario.documento">
+
+        </div>
+        <div class="mb-3">
+            <label for="nombres">Nombres:</label>
+            <input type="text" class="form-control" name="nombres" required [(ngModel)]="usuario.nombres">
+        </div>
+
+        <div class="mb-3">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" class="form-control" name="apellidos" required [(ngModel)]="usuario.apellidos">
+        </div>
+
+        <div class="mb-3">
+            <label for="direccion">Direccion:</label>
+            <input type="text" class="form-control" name="direcion" required [(ngModel)]="usuario.direccion">
+        </div>
+
+        <div class="mb-3">
+            <label for="telefono">Telefono:</label>
+            <input type="text" class="form-control" name="telefono" required [(ngModel)]="usuario.telefono">
+        </div>
+
+        <div class="mb-3">
+            <label for="correo">Correo:</label>
+            <input type="email" class="form-control" name="correo" required [(ngModel)]="usuario.correo">
+        </div>
+
+        <div class="row">
+            <div class="col col-6">
+                <button type="submit" class="btn btn-primary" (click)="modificarUsuario()"> Modificar</button>
+            </div>
+            <div class="col col-6">
+                <button type="submit" class="btn btn-warning"> Cancelar</button>
+            </div>
+        </div>
+
+    </div>
+</form>
