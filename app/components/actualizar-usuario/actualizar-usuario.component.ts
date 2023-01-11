@@ -40,6 +40,7 @@ export class ActualizarUsuarioComponent implements OnInit {
   }
 
   modificarUsuario() {
+    
     this.usuarioservice.updateUsuario(this.usuario).subscribe(
       (datos: any) => {
         alert(datos['mensaje']);
@@ -51,14 +52,11 @@ export class ActualizarUsuarioComponent implements OnInit {
 
   guardarUsuario() {
     this.usuarioservice.saveUsuario(this.usuario).subscribe(
-      (datos: any) => {
-
-        alert(datos['mensaje']);
-        this.router.navigate(['/lista-usuario']);
+      res => {
+        alert(res)
+        this.router.navigate(['/lista-usuario'])
       },
-      (error) => { console.log(error) }
+      err => console.error(err)
     );
-
-
   }
 }
